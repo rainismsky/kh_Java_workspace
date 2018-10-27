@@ -1,0 +1,13 @@
+<script>
+
+a= {b: {c: {x:5, y:5,z:5}}}
+
+with(a,b,c){ x=10; z=12;}
+
+console.log(a,b,c,x); 
+console.log(a,b,c,y); 
+console.log(a,b,c,z); 
+
+</script>
+
+<!-- 이건 잘 안쓰는 타입이란다 왜쓰는건지 모르겠다 시부엉 -->

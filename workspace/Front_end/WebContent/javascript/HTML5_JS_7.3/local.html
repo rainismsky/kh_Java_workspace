@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>new document</title>
+</head>
+
+<script>
+var scope = "global";
+function checkscope(){
+	var scope="local";
+	document.write(scope);
+}
+checkscope();
+document.write("<br>");
+document.write(scope);
+</script>
+
+<body>
+
+</body>
+</html>

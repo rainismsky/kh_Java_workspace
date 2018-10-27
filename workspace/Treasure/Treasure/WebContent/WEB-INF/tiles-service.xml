@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="euc-kr" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+
+<tiles-definitions>
+	<definition name="header" template="/css/header.jsp">
+	</definition>
+	<definition name="header_admin" template="/css/header_admin.jsp">
+	</definition>
+	<definition name="menu_c" template="/css/menu_c.jsp">
+	</definition>
+	<definition name="menu_r" template="/css/menu_r.jsp">
+	</definition>
+	<definition name="menu_a" template="/css/menu_a.jsp">
+	</definition>
+	<definition name="menu_m" template="/css/menu_m.jsp">
+	</definition>
+	<definition name="menu_comu" template="/css/menu_comu.jsp">
+	</definition>
+	<definition name="menu_admin" template="/css/menu_admin.jsp">
+	</definition>
+</tiles-definitions>

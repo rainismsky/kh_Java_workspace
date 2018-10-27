@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+ 
+<mapper namespace="member"> <!-- member. -->
+	<insert id="addMem" parameterType="test.vo.MembersVo">  <!-- parameterType="test.vo.MembersVo" 매퍼 객체로 값을 꺼내서 사용 -->
+		insert into mem values(
+		#{id},#{pwd},#{email},#{phone},#{regdate}
+		)
+	</insert>
+	
+	<update id="updateMem" parameterType="test.vo.MembersVo">
+	update mem
+	set pwd = #{pwd},email = #{email},phone = #{phone}
+	where id = #{id}
+	</update>
+	
+	<delete id="deleteMem" parameterType="String">
+	delete from mem where id=#{id}
+	</delete>
+	
+	<select id="getlist" resultType="test.vo.MembersVo">
+		select * from MEM <!-- 여기다 세미콜론 찍으면 안됨. 1111:부적합한 열 인덱스 뜸 -->
+	</select>
+</mapper>

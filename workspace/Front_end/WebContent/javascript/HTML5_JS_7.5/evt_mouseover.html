@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function OnMouseln(elem)
+	{
+		elem.style.border = "2px solid red";
+	}
+	function OnMouseOut(elem)
+	{
+		elem.style.border = "";
+	}
+</script>
+</head>
+
+<body>
+	<div style="background-color:yellow; width:200px"
+		onmouseover="OnMouseln (this)" onmouseout="OnMouseOut(this)">
+		마우스를 이 요소 위에 이동해보거라!
+		</div>
+</body>
+
+</html>

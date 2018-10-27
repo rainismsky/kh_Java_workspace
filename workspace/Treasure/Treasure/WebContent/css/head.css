@@ -1,0 +1,90 @@
+body {
+	font-family: "Lato", sans-serif;
+}
+
+.header2 {
+	position : fixed;
+	top: 0;
+	margin: auto;
+	width: 1200px;
+	z-index: 1005;
+	margin-left: 18%;
+}
+
+.header {
+	/* font-family: 'Do Hyeon', sans-serif; */
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
+	font-size: 75px;
+	background-color: #0B3B17;
+	color: #F5ECCE;
+	text-align: center;
+	height: 120px;
+	padding-top: 20px;
+}
+
+.header a{
+	color: #F5ECCE;
+	text-decoration: none;
+	
+	
+}
+
+.header a:hover{
+	text-decoration: none;
+	
+}
+
+.tablink {
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
+	background-color: #0B3B17;
+	color: white;
+	float: left;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	padding: 14px 16px;
+	font-size: 17px;
+	width: 25%;
+	
+
+	
+}
+
+.tablink:hover {
+	background-color: #F5ECCE;
+	color: black;
+	
+}
+
+/* Style the tab content */
+.tabcontent {
+	color: white;
+	display: none;
+	padding: 50px;
+	text-align: center;
+	
+}
+
+.right {
+	text-align: right;	
+	position: absolute;
+	top: 10px;
+	right: 8px;
+	color: white;
+}
+
+.right a {
+	color: white;
+	padding-right: 20px;
+	text-decoration: none;
+	font-family: 'Poiret One', cursive;
+	font-weight: bold;
+	
+}
+
+.right a:hover {
+	text-decoration: underline;
+	
+}

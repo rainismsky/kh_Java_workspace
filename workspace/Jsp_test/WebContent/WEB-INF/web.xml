@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>Jsp_test</display-name>
+  
+  <context-param>
+   <param-name>초기화 파라미터 이름</param-name>
+   <param-value>초기화 파라미터 값</param-value>
+  </context-param>
+  
+    <context-param>
+   <param-name>level</param-name>
+   <param-value>10</param-value>
+  </context-param>
+
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+<context-param>
+<param-name>javax.servlet.jsp.jstl.fmt.localizetionContext</param-name>
+<param-value>resource.message</param-value> 
+</context-param>
+<context-param>
+<param-name>javax.servlet.jsp.jstl.fmt.locale</param-name> 
+<param-value>ko_kr</param-value>
+</context-param>
+<context-param>
+<param-name>javax.servlet.jsp.jstl.fmt.timeZone</param-name>
+<param-value>Asia/Seoul</param-value>
+</context-param>
+
+ <!-- TilesDispatchServlet을 이용한 Tiles 사용  -->
+ <servlet>
+ <servlet-name>TilesDispatchServlet</servlet-name>
+ <servlet-class>
+ org.apache.tiles.web.util.TilesDispatchServlet
+ </servlet-class>
+ </servlet>
+ 
+ <servlet-mapping>
+ <servlet-name>TilesDispatchServlet</servlet-name>
+ <url-pattern>*.tiles</url-pattern>
+ </servlet-mapping>
+ 
+ 
+ <!-- web.xml에 Tiles 엔진 초기화 관련 코드 추가  --> 
+<servlet>
+<servlet-name>tiles</servlet-name>
+<servlet-class>org.apache.tiles.web.startup.TilesServlet</servlet-class>
+<init-param>
+<param-name>org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG</param-name>
+<param-value>/WEB-INF/tiles-hello.xml,/WEB-INF/tiles-service.xml</param-value>
+</init-param>
+<load-on-startup>1</load-on-startup>
+</servlet>
+
+  
+  <!--  web.xml에 서블릿 등록 -->
+  <servlet>
+  	<servlet-name>newservlet</servlet-name> <!-- 서블릿 생성  -->
+  	<servlet-class>day01.NowServlet</servlet-class> <!-- 서블릿등록시 본인 클래스명 맞춰야됨 -->
+  </servlet>
+  
+  <!-- 커넥션풀 등록 -->
+  <servlet>
+	<servlet-name>DBCPInit</servlet-name>
+	<servlet-class>jdbc.DBCPInit</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+  
+
+<servlet-mapping>
+<servlet-name>newservlet</servlet-name>
+<url-pattern>/newServlet</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>SimpleController</servlet-name>
+<servlet-class>mvc.SimpleController</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>SimpleController</servlet-name> 
+<url-pattern>/simple</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>ControllerUsingFile</servlet-name>
+<servlet-class>mvc.controller.ControllerUsingFile</servlet-class>
+<init-param>
+<param-name>configFile</param-name>
+<param-value>/WEB-INF/commandHandler.properties</param-value>
+</init-param>
+</servlet>
+<servlet-mapping>
+<servlet-name>ControllerUsingFile</servlet-name>
+<url-pattern>/controllerUsingFile</url-pattern>
+</servlet-mapping>
+
+<servlet>
+<servlet-name>ControllerUsingURI</servlet-name>
+<servlet-class>mvc.controller.ControllerUsingURI</servlet-class>
+<init-param>
+<param-name>configFile2</param-name>
+<param-value>/WEB-INF/commandHandlerURI.properties</param-value>
+</init-param>
+</servlet>
+<servlet-mapping>
+	<servlet-name>ControllerUsingURI</servlet-name>
+	<url-pattern>*.do</url-pattern>
+</servlet-mapping>
+
+
+<!-- web.xml에 에러페이지 등록  
+<error-page>
+<error-code>404</error-code>
+<location>/chap08/error/error404.jsp</location>
+</error-page>
+
+<error-page>
+<exception-type>java.lang.NullPointerException</exception-type>
+<location>/chap08/error/errorNullpointer.jsp)</location>
+</error-page>
+-->
+
+
+<!--  <jsp-config> 다른것과 다르게 이 문서안에선 하나만 존재해야 에러가 안나용!-->
+<jsp-config>
+<jsp-property-group>
+	<url-pattern>/chap07/view/*</url-pattern>
+<include-prelude>/chap07/common/variable.jspf</include-prelude>
+<include-coda>/chap07/common/footer.jspf</include-coda>
+</jsp-property-group>
+	<jsp-property-group>
+	<url-pattern>/EL/oldversion/*</url-pattern>
+	<el-ignored>true</el-ignored>
+	</jsp-property-group>
+</jsp-config>
+
+</web-app>

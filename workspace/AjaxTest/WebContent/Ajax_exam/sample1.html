@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sample1</title>
+<h2>jQuery and AJAX is FUN!!!</h2>
+<p id="p1">This is some text in a paragraph.</p>
+<script src="http://code.jauery.com/jquery-3.3.1.min.js"></script>
+
+<script>
+$(function(){
+	$("button").click(function(){
+		$("p").load("sample1.txt");
+	});
+});
+
+</script>
+
+</head>
+<body>
+	<button>변경</button>
+	<p> 변경전 </p>
+</body>
+</html> 

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+   <head>
+   <title>sample4</title>
+  <style>
+    #shin{width: 450px;}
+  </style>
+
+  <script>
+
+  </script>
+   </head>
+   <body>
+    <div id="shin">
+    <form>
+      <fieldset>
+        <legend>납품자정보</legend>
+          <ol>
+            <li>납품자명: <input type="text" replace placeholder="Name"/></li><br>
+            <li>email: <input type="email"  replace placeholder="email@abc.com"/></li><br>
+            <li>홈페이지: <input type="url"  replace placeholder="http://www.abc.com"/></li><br>
+          </ol>
+      </fieldset>
+      <br>
+      <fieldset>
+         <legend>납품정보</legend>
+            <ul>
+              <li>상품명:<input type="text" list="product"/>
+                  <datalist id="product">
+                     <option value="dog1004"> dog1004 </option>
+                     <option value="catchicken"> catchicken </option>
+                     <option value="milk" > milk </option>
+                  </datalist></li><br>
+              <li>납품수량: <input type="number" min="10" max="100" step="10" size="20" replace placeholder="최소10자이상"/></li><br>
+              <li>납품등급: <input type="range" name="priority" id="priority" min="0" max="10" step="2" value="6"></li><br>
+              <li>기타사항: <textarea cols="30" rows="3"></textarea></li><br>
+            </ul>
+      </fieldset>
+      <br>
+      <input type="submit" value="send message"/>
+    </form>
+    </div>
+   </body>
+</html>

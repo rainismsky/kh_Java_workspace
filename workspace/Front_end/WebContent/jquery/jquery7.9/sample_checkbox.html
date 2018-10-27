@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sample20</title>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		
+</head>
+<body>
+
+<input type="checkbox" id="check" checked>
+
+<!--  attr(),prop()의 차이 -->
+<!--  .attr()은 HTNL의 속성을 취급, HTML로서 기록되 있는 속성 내용 
+.prop는()sms JavaScript 프로퍼티를 취급  -->
+
+<a id="test" href="#test"> 눌러본나</a>
+
+<script>
+var link = $('#test');
+alert("attr"+link.attr('href')); //html
+alert("prop"+link.prop('href')); //
+</script>
+
+<input type="checkbox" id="check" checked>
+<script>
+function c_status(){
+var check = $('#Check');
+alert("attr"+link.attr('checked'));
+alert("prop"+link.prop('checked'));
+}
+$(function(){
+	$('$check').change(function(){
+		alert("attr " + $ (this).attr('checked'));
+		alert("prop " + $ (this).prop('checked'));
+		
+	});
+});
+
+</script>
+
+</body>
+
+</html>

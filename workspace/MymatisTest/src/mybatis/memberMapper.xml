@@ -1,0 +1,15 @@
+<?xml version="1.0"    encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member"> <!-- member.getlist 로 호출 -->
+   	<insert id="addMem" parameterType="test.vo.MembersVo">	<!-- 받아온 값으로 쿼리를 처리할 떄 -->
+		insert into mem values (#{id},#{pwd},#{email},#{phone},#{regdate})
+	</insert>
+	<update id="updateMem" parameterType="test.vo.MembersVo">
+		update mem set pwd=#{pwd}, email=#{email}, phone=#{phone}, regdate=#{regdate} where id=#{id};
+	</update>
+	<select id="getlist" resultType="test.vo.MembersVo"> 	<!-- 명령어 세미클론 찍지 말것! 갖고온 db를 test.vo.MembersVo에 저장하겠음 --><!--  결과처라할 때 -->
+		select * from mem
+	</select>
+</mapper>

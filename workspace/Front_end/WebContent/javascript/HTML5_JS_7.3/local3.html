@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>new document3</title>
+
+<script> 
+var scope = "global";
+function f(){
+	/*var scope; 함수에 변수가 선언된 경우 어디든 상관없이 끌어올려 제일 첫줄에 선언됨.*/
+	
+	alert(scope);
+	var scope="local";
+	alert(scope);
+}
+f();
+</script>
+</head>
+
+<body>
+
+</body>
+</html>

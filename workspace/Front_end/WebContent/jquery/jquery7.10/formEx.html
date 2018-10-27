@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>근호님의 회원가입 Page</title>
+	<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+	<script>
+	$(function(){
+		$("form").submit(function(){
+			
+			//에러 초기화
+			$("p.error").remove(); //.remove() : p.error 태그를 제거한다 
+			$("dl dd").removeClass("error");
+			
+			$(":text,textarea").filter(",validate").each(function(){
+				
+				//필수 항목 체크
+				$(this).filter(".required").each(function(){
+					if($(this)).val()==""){
+					$(this).parent().prepend("<p class='error'> 필수 항목!</p>");
+				}					
+				});
+				
+			})
+			
+		})
+		
+	})
+	
+	</script>
+</head>
+<body>
+
+</body>
+</html>

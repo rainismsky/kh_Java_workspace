@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+var user={
+name : '자바',
+sayName:function(){
+console.log(this.name);
+}
+};
+
+var other_user={
+name:'스프링'
+};
+
+other_user.sayName = user.sayName;
+user.sayName();
+
+other_user.sayName();
+</script>
+</head>
+<body>
+
+</body>
+</html>

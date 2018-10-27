@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript">
+var id;
+var temp = false; //false : 실행, true : 중지
+
+function changeColor() {
+	id = setInterval(flashText, 500);
+}
+function flashText() {
+	var elem = document.getElementById("target");
+	elem.style.color = (elem.style.color == "red") ? "blue" : "red";
+	elem.style.backgroundColor = 
+		(elem.style.backgroundColor == "green") ? "yellow" : "green";
+}
+function stopTextColor(){
+	document.getElementById("button").innerHTML="실행";
+	clearInterval(id);
+	temp = flase;
+}
+temp = true;
+</script>
+</head>
+
+<body onload="changeColor();">
+	
+	<div id="target">
+	<p> This is a Text. </p>
+	</div>
+	
+	<button id="button" onclick="stopTextColor();">중지</button>
+
+</body>
+</html>
+

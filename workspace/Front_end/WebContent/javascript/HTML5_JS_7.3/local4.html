@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>new document4</title>
+
+<script>
+var scope = "global";
+function checkscope(){
+	var scope="local";
+
+function nested(){
+	var scope = "nest";
+	document.write(scope);
+}
+
+/* 자바 스크립트는 메소드 안에 메소드 호출이 가능하다고함 
+ * 
+ *위와 같이 function 안에 function 메소드 선언하는 것처럼*/
+
+document.write(scope);
+nested();
+}
+checkscope();
+nested();
+
+document.write(scope);
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

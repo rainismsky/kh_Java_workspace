@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample10 </title>
+		<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<style type="text/css">
+p{
+	width:800px;
+	height:267px;
+	margin:0;
+}
+div{
+	width:400px;
+	height:267px;
+	overflow:hidden;
+}
+		</style>
+		<script>
+$(function(){
+	$("#flower").click(function(){
+		$("p:not(:animated)").animate({
+			marginLeft : "-400px" 
+		},"slow","swing");
+	});
+	$("#building").click(function(){
+		$("p:not(:animated)").animate({
+			marginLeft : "0" 
+		},"slow","swing"); //p가 애니메이션 동작을 하지 않을시 애니메이션 기능을 주겠다는 의미!
+	});
+});
+		</script>
+	</head>
+	<body>
+		<div><p><img src="flower.jpg" alt="flower" id="flower" /><img src="building.jpg" alt="building" id="building" /></p></div>
+	</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>category</title>
+
+<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+<link rel="stylesheet" type="text/css" href="css/common.css"/>
+
+<style type="text/css">
+
+form > span{
+display: none;
+}
+</style>
+
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	$("#category1").load("ajax/text/category-data.html #category1-1",) function(){
+		$(this).show();
+		});
+
+$(document).on("change","#caregory1 > select", function() {
+	
+	$("#caregory2").empty().hide();
+	$("#caregory3").empty().hide();	
+
+var target = $(this).fine("option:selected").attr("data_target");
+var selector = "ajax/text/category-data.html" + target;
+
+$("#category2").load(selector, function() {
+	$(this).show();
+});
+});
+
+$(document).on("change", "#category2 > select", function() {
+	
+	$("#category3").empty().hide();
+	
+	var target = $(this).find("option:selected").attr("data-target");
+	var selector = "ajax/text/category-data.html" + target;
+	$("#category3".load(selector, function() {
+		$(this).show();
+	});	
+});
+	
+	$(document).on("change","#category3 > select", function() {
+		if($(this).find("option:selected").index() > 0 {
+			
+		var data1 = $("#category1 > select > option:selected").val();
+		var data2 = $("#category2 > select > option:selected").val();
+		var data3 = $(this).find("").val();
+		}
+	}
+		
+	})
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

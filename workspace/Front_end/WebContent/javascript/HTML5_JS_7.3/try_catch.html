@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script>
+var msg = "";
+function test(){
+	try{
+		allert("Hello World!");
+	}
+	catch(error){
+		msg = "E RUN C8 다음과 같은 오류가 발생했어용!:"+ error.message;
+		alert(msg);
+	}
+}
+
+</script>
+
+<meta charset="UTF-8">
+<title>try_catch</title>
+</head>
+
+<body>
+
+<input type="button" value="try-catch EXAM" onclick="test()"/>
+
+</body>
+</html>

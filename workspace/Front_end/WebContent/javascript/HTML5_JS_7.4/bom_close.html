@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+   function sendValue() {
+      var value = document.forms[0].val.value;
+      opener.document.getElementById("value").innerHTML 
+      = value;
+      self.close();
+   }
+</script>
+</head>
+<body>
+<form>
+   <input type="text" name="val">
+   <input type="button" value="보내기" onclick="sendValue()">
+</form>
+</body>
+</html>

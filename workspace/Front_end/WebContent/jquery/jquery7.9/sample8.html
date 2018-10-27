@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html>
+	<head>
+	<title>sample8</title>
+		<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+		<script>
+$(function(){
+	$("a").dblclick(function(){
+		$("img").attr("src",$(this).attr("href")).attr("alt",$(this).text());
+	}).click(function(){
+		return false;
+	});
+});
+		</script>
+	</head>
+	<body>
+	<ul>
+	<li><a href="flower.jpg">²É</a></li>
+		<li><a href="sea.jpg">¹Ù´Ù</a></li>
+		<li><a href="Jellyfish.jpg">ÇØÆÄ¸®</a></li>
+		<li><a href="building.jpg">°Ç¹°</a></li>
+		
+	</ul>
+	<p><img src="flower.jpg" alt="²É" /></p>
+	
+	</body>
+</html>

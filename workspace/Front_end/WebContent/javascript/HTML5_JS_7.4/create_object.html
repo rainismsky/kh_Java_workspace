@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>qt</title>
+
+<script>
+function create_object(o){
+	function F() {}
+	F.prototype = o;
+	return new F();
+}
+
+var blog = {
+		name:",
+		getName : function(){
+			return this.name;
+		},
+		setName : function(name){
+			this.name = name;
+		}
+};
+
+function create_object(o){
+	function F() {};
+	F.prototupe = o;
+	return new F();
+}
+var ob = create_object(blog);
+ob.setAge = function(age) {this. age = age;};
+ob.getAge = function(age) {return this.age;};
+
+ob.setName('Java');
+ob.setAge(20);
+
+console.log(ob.getName());
+console.log(ob.getAge());
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

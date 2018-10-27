@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+	function get(){
+		var val = document.getElementById("ex").innerHTML;
+		alert(val);
+	}
+	function set(v){
+		document.getElementById("ex").innerHTML = v;
+	}
+</script>
+
+</head>
+<body>
+<div id="ex"> 효댕이가 div로 선언됨!</div>
+<a href="#" onclick="get()">div 요소 내용 출력하기</a><br />
+<a href="#" onclick="set('효댕이 변신 완료!')">div 요소 내용 변경하기</a>
+
+</body>
+</html>

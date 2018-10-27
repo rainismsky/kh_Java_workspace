@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+		<title>sample7</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+		<script type="text/javascript">
+
+$(function(){
+	$("a").dbclick(
+			function(){
+		$("img").attr("src",$(this).attr("href"))
+				.attr("alt", $(this).text));
+	}).click(function() {
+		return false;
+	});
+});
+		</script>
+	</head>
+
+<body>
+<button>È­¸é change</button>
+
+<p><img src="flower.jpg" alt="²É"/></p>
+</body>
+
+</html>

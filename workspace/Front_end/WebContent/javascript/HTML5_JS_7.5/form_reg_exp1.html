@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function checkSelection(elem, msg){
+	if(elem.value == 0){
+		alert(mag);
+		elem.focus();
+		return false;
+	}else{
+		return true;
+	}
+}
+</script>
+</head>
+
+<form>
+과일 선택  <select id="fruits" class="required">
+<option value="0">선택해</option>
+<option value="1">사과</option>
+<option value="2">배</option>
+<option value="3">바나나</option>
+</select>
+
+<input type='button'
+onclick="checkSelection(document.getElementById("fruits"),'하나를 선택해야 됨.')"value='확인' />
+</form>
+
+<body>
+</body>
+</html>

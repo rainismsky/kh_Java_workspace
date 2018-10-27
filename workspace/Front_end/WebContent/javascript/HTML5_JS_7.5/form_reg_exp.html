@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+function checkNumber(elem, msg){
+	var exp = /^[0-9]+$/;
+	if(elem.value.match(exp)){
+		return true;
+	}else{
+		alert(msg);
+		elem.focus();
+		return false;
+	}
+}
+</script>
+<form>
+전.번 (-없이 입력ㄱㄱ) : <input type='text' id='phone'/>
+<input type='button'
+onclick="checkNumberid(document.getElementById('phone'),'숫자만 입력하라!')" 
+value='확인'/>
+</form>
+
+</head>
+
+<body>
+
+</body>
+</html>

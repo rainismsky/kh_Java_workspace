@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>MVC_All</display-name>
+  
+<!-- 커넥션풀 등록 -->
+<servlet>
+	<servlet-name>DBCPInit</servlet-name>
+	<servlet-class>JDBC.DBCPInit</servlet-class>
+	<load-on-startup>1</load-on-startup>
+</servlet>
+
+<!-- MVC게시판 컨트롤러 URI추가  -->
+<servlet>
+	<servlet-name>ControllerUsingURI</servlet-name>
+	<servlet-class>controller.ControllerUsingURI2</servlet-class>
+	<init-param>
+		<param-name>configFile2</param-name>
+		<param-value>/WEB-INF/commandHandlerURI.properties</param-value>
+	</init-param>
+  </servlet>
+	
+  <servlet-mapping>
+	<servlet-name>ControllerUsingURI</servlet-name>
+	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,11 @@
+<%@ page contentType = "text/html; charset=utf-8" %>
+<!--  jspf : 조각파일 -->
+includer.jsp에서 지정한 번호: <%= number %>
+
+<!-- jspf : 조각파일
+jsp구문을 쓰지만 조각조각으로 나뉜 파일이라고 한다  -->
+
+<p>
+<%
+	String dataFolder = "D:\\data";
+%>

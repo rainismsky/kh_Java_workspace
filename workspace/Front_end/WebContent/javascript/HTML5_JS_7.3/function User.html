@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script>
+function User(arg){
+	this.name = arg;
+	this.getName = function(){
+		return this.name;
+	};
+	this.setName = function(value){
+		this.name = value;
+	}
+}
+
+var me = new User('자바');
+console.log(me.getName());
+
+me.setName("javaScript");
+console.log(me.getName());
+
+var me = new User('me');
+var you = new User('you')
+
+</script>
+
+</head>
+<body>
+</body>
+</html>

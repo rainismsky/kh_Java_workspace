@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+	// 버튼 클릭 이벤트
+	$("#btnOk").click(function(){
+		startXhr();
+	});
+});
+function starXhr(){
+	var jqxhr = $.getJSON("ta.json", function(data){
+		var items = [];
+		$.each(data, function(Key, val) {
+			items.push("<li id='" + key + "'>" + val + "</li>");
+		});
+
+		$("<ul/>", {"class" : "my-new-list", html : items.join("")
+		}).appendTo("#disp");
+	}).done(function() {
+	    console.log( "second success");
+	  })
+	  .fail(function() {
+	    console.log( "error" );
+	  })
+	  .always(function() {
+	    console.log( "complete" );
+	  });
+}
+
+
+</script>
+
+</head>
+<body>
+	<button id="btnOk">AJAX로 JSON 읽기</button>
+	<br>
+	<br>
+	<div id="disp"></div>
+
+</body>
+</html>

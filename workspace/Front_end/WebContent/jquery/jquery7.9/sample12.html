@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>sample12</title>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+$(function(){
+$("img").mousemove(function(e){
+	$("p").html("현재 x좌표:"+e.clientX+"<br />현재 Y좌표:"+e.clientY);
+});
+});
+</script>
+
+</head>
+
+<body>
+<img src="flower.jpg" alt="꽃"/>
+<p></p>
+
+</body>
+</html>

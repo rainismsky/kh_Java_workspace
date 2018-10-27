@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=utf-8"%>
+<%@ page import="board.CommentDBBean" %>
+<%@ page import="java.sql.Timestamp" %>
+
+<%
+request.setCharacterEncoding("utf-8");
+%>
+
+<%
+	int content_num=Integer.parseInt(request.getParameter("content_num"));
+	int comment_num=Integer.parseInt(request.getParameter("comment_num"));
+	String pageNum=request.getParameter("pageNum");
+	String passwd=request.getParameter("passwd");
+	
+	CommentDBBean cmtPro=CommentDBBean.getInstance();
+	int check=cmtPro.deleteComment(content_num, passwd, comment_num);
+	
+	if(check==1){
+	
+%>
+	<meta http-equiv=Refresh content="0;url=content1.jsp?num=<%=content_num%>&pageNum=<%=pageNum %>">
+	<%}else{%>
+	<script language="javascript">
+	
+	<!-- alert("pw가 맞지 않음");
+	history.go(-1); -->
+	
+	</script>
+<%} %>
+

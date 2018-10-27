@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>My Blog Page</title>
+<style>
+#wrapper{width:70%; margin:0 auto;}  /* 크기를 70%로 가운대 배치하기 */
+
+#header{
+background-color:Yellow;
+width: 100%;
+height: 50px;
+}
+
+#nav{
+width: 30%;
+background-color: red;
+height: 100px;
+float: left;
+}
+
+#content{
+width: 70%;
+background-color:blue;
+float: right;
+height: 100px;}
+
+#secondline{
+overflow:hidden;
+/*부모 태그에 overflow: hidden지정하면 자식 속성( ex)float)도 다 감춘다.*/ 
+
+}
+
+#footer{
+background-color:aqua;
+width: 100%;
+height: 50px;
+clear: both;  /*같은줄에 나오는 요소가 아니면 그 다음줄에 나올 요소와 내용은 클리어 처리를 해줘야한다*/
+}
+
+</style>
+</head>
+
+<body>
+	<div id="wrapper">
+	<div id="header">header</div>
+	<div id="nav">nav</div>
+	<div id="content">content</div>
+	<div id="footer">footer</div>
+	
+	
+	</div>
+
+</body>
+</html>

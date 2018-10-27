@@ -1,0 +1,44 @@
+﻿<meta charset="UTF-8">
+<script>
+	function inputCheck() {
+		//1.아이디 글자수 체크 
+		var s = document.getElementById("username").value;
+		 if (!(s.length >= 6 && s.length <= 8)) {
+			alert("6 문자와 8 문자 사이로 입력해주세요!");
+			document.getElementById("username").focus();
+			return false;
+		}
+		//2.아이디 한글 못쓰게
+		var exp = /[ㄱ-ㅎ|ㅏ-ㅣ|가-힣]/;
+		if(s.match(exp)){
+			alert("한글 입력 안됨");
+			document.getElementById("username").focus();
+			return false;
+		}
+		//3.이름 빈문자열/공백 안됨
+		var field = document.getElementById("name").value;
+	 	if (field.trim().length == 0) {
+			alert("필드가 비어있네요!");
+			document.getElementById("name").focus();
+			return false;
+		} 
+		//4.휴대폰은 숫자만 입력    1~4번 조건 다 허용시 submit 가능
+		var phone = document.getElementById("phone").value;
+		exp = /^[0-9]+$/;
+		if (!phone.match(exp)) {
+			alert("숫자가 아님");
+			document.getElementById("phone").focus();
+			return false;
+		} 
+		//return true; 안써도 자동으로 true값이 오기에 의미가 없단다
+	}
+</script>
+
+<h3>회원가입</h3>
+<form onsubmit="return inputCheck()" action="ok.html">
+	이름: <input type='text' id='name' /><br /> 주소: <input type='text'
+		id='addr' /><br /> 생일: <input type='date' id='birthday' /><br />
+	아이디(6-8 문자): <input type='text' id='username' /><br /> 이메일: <input
+		type='email' id='email' /><br /> 휴대폰: <input type='tel' id='phone' /><br />
+	<input type='submit' value='확인' /><br />
+</form>

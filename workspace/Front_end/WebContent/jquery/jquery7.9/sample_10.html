@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+$(function(){
+	$(":text").focus(function(){
+		$(this).after("<strong> 필수 항목 입니다</strong>");
+	}).blur(function(){
+		$("strong").remove();
+	});
+});
+</script>
+</head>
+
+<body>
+이름 : <input type="text" name="name"/>
+</body>
+
+</html>

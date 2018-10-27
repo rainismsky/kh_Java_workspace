@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form test!</title>
+</head>
+<body>
+
+<form></form>
+<form name="form1">
+
+<label for="name">이름</label>
+<input type="text" id="name" name="username"><br>
+
+<label for="pwd">비번</label>
+
+<input type="password" id="pwd" name="userpwd">
+
+<input type="button" value="체크" 
+onclick="alert(document.form1.userpwd.value)">
+</form>
+
+<!-- 라디오 버튼  -->
+<form>
+<ul id="sel1">
+<li>
+<input type="radio" id="free" name="pay" value="free">
+<lavel for="free">무료(교내참가자)</lavel>
+</li>
+<li>
+<input type="radio" id="paid" name="pay" value="paid">
+<label for="paid">유료(교외참가자)</label>
+</li>
+</ul>
+</form>
+
+<!-- 체크박스 !!  -->
+<ul id="sel2">
+<li>
+<input type="checkbox" id="html5" value="semantic">
+<label for="html5">HTML5 시맨틱</label>
+</li>
+
+<li>
+<input type="checkbox" id="css3" value="css3">
+<label for="css3">css3</label>
+</li>
+
+<li>
+<input type="checkbox" id="Web Storage" value="Web Storage">
+<label for="Web Storage">Web Storage</label>
+</li>
+
+<li>
+<input type="checkbox" id="Web Socket" value="Web Socket">
+<label for="Web Socket">Web Socket</label>
+</li>
+
+<li>
+<input type="checkbox" id="Canvas" value="Canvas">
+<label for="Canvas">Canvas</label>
+</li>
+
+<li>
+<input type="checkbox" id="Geolocation" value="Geolocation">
+<label for="Geolocation">Geolocation</label>
+</li>
+
+</ul>
+
+<h2>때양</h2>
+<img border="0" src="C:\Users\user1\Desktop\H Share\images/"PIA03149_ip.jpg alt="태양" width="500" 
+height="400">
+
+<form>
+<label for = "mail">메일주소</label>
+<input type="email" id="mail" size="20"><br>
+<label for = "homep">홈피(URL)</label>
+<input type="url" id="homep" maxlength="50">
+</form>
+
+<form>
+이메일 : <input type="email" name="email" required><br>
+URL : <input type="url" name="url" required><br>
+전화번호 : <input type="tel" name="tel" required
+pattern="[0-9]{3}--{0--9}{4}--[0--9]{4}"
+title="###-####-####"><br>
+<input type="submit"/>
+
+</form>
+
+
+<!-- search -->
+<form>
+
+<label for="mtseatch">상품검색</label>
+<input type="search" id="mysearch" size="20"><br>
+
+</form>
+
+<form>
+
+<li>
+<label for="no">주문 개수</label>
+<input type="range" id="no" min="1" max="10" step="1" value="1">
+</li>
+
+<li>
+<label for="size">사이즈</label>
+<input type="number" id="size" min="85" max="100" step="5" value="85">
+</li>
+</label>
+
+</form>
+
+
+
+</body>
+</html>

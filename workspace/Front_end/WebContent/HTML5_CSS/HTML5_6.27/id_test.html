@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>ID TEST</title>
+</head>
+<body>
+
+<!--id 속성은 #으로 표현  -->
+
+<a href="#section1">참고 사항으로 갈라면 여길 클릭하셈.</a>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<p> Hello World!</p>
+<hr/>
+
+<a id="section1"> 참고사항!!</a>
+
+<p> 동일한 페이지 안에서도 점프 가능!</p>
+
+
+<!-- 경로 지정 -->
+
+<!-- 외부 문서인 경우 절대 경로 지정 -->
+<a href="https://www.naver.com" target=_blank>네이버</a><br>
+
+<!-- 같은 project안에 있는 경우 상대경로로 지정해줌 -->
+<!--  같은 위치라면 파일명만 적거나 ./파일명으로 지정 -->
+<a href="./index.jsp">index.jsp</a><br>
+
+<!--  상위 폴더에 있는경우 ../ 를 사용!  -->
+<a href="./coffee.html">coffee.html</a><br>
+
+<a href="./id_test.html">id_test.html</a><br>
+<!--   http://localhost:8088/Front_EndEx/id_test.html // 정상작동 URL-->
+ 
+<a href="/hr_test.html">hr_test.html</a><br>
+<!-- http://localhost:8088/id_test.html // 404오류발생 URL-->
+
+<!-- 경로 지정시 /로 시작하면 해당 경로만 url path부분에 들어감 
+/로 시작하는 경우엔 꼭 /context_root부터 시작해야함.
+-->
+
+<a href="/id_test.html">id_test.html 못찾음 </a><br>
+
+<a href="../Front_Endex/WebContent/coffee.html">coffee.html</a>
+
+</body>
+</html>

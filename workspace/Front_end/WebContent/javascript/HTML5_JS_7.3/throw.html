@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>throw</title>
+</head>
+
+<body>
+
+<script>
+var solution = 53;
+function test(){
+	try{
+	var x = document.getElementById("number").value;
+	if (x == "") throw "입력없음";
+	if (isNaN(x)) throw "숫자가 아닌대?";
+	if (x > solution) throw "ㅈㄴ큼";
+	if (x < solution) throw "ㅈㄴ작음";
+	if (x == solution) throw "성공";
+}
+catch (error){
+	var y = document.getElementById("message");
+	y.innerHTML = "힌트 : " + error;
+}
+}
+</script>
+
+<h1>Number Guess</h1>
+<p>1 ~ 100 사이 숫자 입력하셈.</p>
+<input id="number" type="text">
+<button type="button" onclick="test()">숫자 추측</button>
+<p id ="message"></p>
+</body>
+</html>

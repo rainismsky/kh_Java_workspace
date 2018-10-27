@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css?family=Sunflower:300');
+
+body{
+	margin:0px;
+	padding:0px;
+	color:black;
+}
+
+header{
+	overflow:hidden;
+	background-color: white;
+}
+
+#header{
+	border : gray solid 2px;
+	height: 100px;   
+	width: 100%; 
+}
+
+img{
+	height:auto;
+	width:5%;	
+	overflow:hidden;
+	vertical-align: middle;
+	margin:5px;
+}
+
+header span{
+	font-size: 50px;
+	font-weight: bold;
+	vertical-align: middle;
+	padding-left: 10px;
+	font-family:'Sunflower:300';
+}
+
+#my{
+	margin-top:15px;
+	margin-right:10px;
+	float:right;
+}
+
+#menu{   
+	height: 35px;   
+	width: 100%; 
+	border-bottom: black solid 2px;
+	border-left: black solid 2px;
+	border-right: black solid 2px;   
+} 
+
+#menu ul{
+	margin:0px;
+	padding-left:0px;
+}
+
+#menu ul li{  /* topMenu�� ID�� ���� �±� �ȿ� <ul> �±� �ȿ� <li> �±��� ��Ÿ���� ���� */ 
+	list-style: none; /*  <li> �±״� ���� �̹���ó�� ����� ��Ÿ���� ���� ���ش� */ 
+	float: left; /*  <li>�±׵��� ���ʿ� �帣�� ����(�׷��� �Ʒ��ִ� ������ ���������� ��) */ 
+	line-height: 35px; /*  �۾��� ����� ������ �����ϱ� ���� ������ ���̸� 30px�� ���� */ 
+	vertical-align: middle; /*  ���� ������ ����� ����(���� line-height�� ���� ���� �ʿ���) */ 
+	text-align: center; /*  �۾� ������ ����� ���� */
+	margin-left:0px;
+	padding-left:0px;
+	} 
+	
+#menu > ul > li:first-child > a { border-radius: 10px 0 0 10px; }
+#menu > ul > li:last-child > a  { border-radius: 0 10px 10px 0; }
+	
+#menu .menuLink{ /*  topMenu ���̵� ���� �±� �ȿ� �ִ� menuLink Ŭ���� �±׵��� ��Ÿ�� ���� */ 
+	text-decoration:none; /*  ��ũ(<a> �±�)�� ������ �⺻ �ٹ� ȿ��(���� ��)�� ���� */ 
+	display: block; /*  ��ũ�� �۾��� �ִ� �κ� �Ӹ��ƴ϶� ��ü ������ Ŭ���ص� ��ũ�� �ɸ��� ���� */ 
+	width: 300px; /*  �޴���ũ�� ���� ���� */ 
+	font-size: 16px; /*  ��Ʈ ������ 12px�� ���� */ 
+	font-family: "Trebuchet MS", Dotum, Arial; /*  �⺻ ��Ʈ ����, �ý��� ��Ʈ�� �������� ������� */
+	font-weight: bold; /*  ��Ʈ�� ���� */ 
+	margin-left:0px;
+	padding-left:0px;
+	color:black;
+} 
+
+#menu .menuLink:hover{ /* topMenu ���̵� ���� �±� �ȿ� menuLinkŬ������ ���� �±׿� ���콺�� over�Ǹ� ��Ÿ�� ���� */ 
+	color: write; /*  �۾� ���� ���������� ���� */ 
+	background-color: #4d4d4d; /*  ������ ���� �� ���� ȸ������ ���� */ 
+}
+
+footer{
+	text-align:center;
+	padding:10px;
+	color: white;
+	height: 100px;   
+	width: 100%;
+	background-color: black;
+	opacity: 0.7; 
+	position: absolute;
+	bottom: 0px;
+}
+

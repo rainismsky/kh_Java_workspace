@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>sample6</title>
+<script src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+
+<style type="text/css">
+
+dl{
+	width:300px;
+	margin:50px auto;
+}
+dl dt{
+background:#7CADB6;
+cursor:pointer;
+}
+dl dd{
+border:1px solid #7CADB6;
+height:250px;
+margin:0;
+}
+
+</style>
+
+<script>
+$(function(){
+	$("dt").click(function(){
+		if($("dd").css("display")=="block"){
+			$("dd:not(:animated)").slideUp("slow"); //display 모드를 none로 바꿔버림
+		}else{
+			$("dd").slideDown("slow");
+		}
+	});
+});
+</script>
+</head>
+<body>
+<dl> 
+<dt>슬라이딩 효과로 표시상태를 변경</dt>
+<dd>
+	slideDown()/siledeUp()는 show()/hide() 와는 다른 슬라이딩 애니메이션 효과로
+	표시/비표시를 변경하는 명령...
+
+</dd>
+</dl>
+</body>
+</html>

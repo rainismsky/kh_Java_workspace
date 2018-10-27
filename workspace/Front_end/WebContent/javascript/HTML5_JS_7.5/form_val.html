@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script>
+
+//1.아이디 글자수 체크
+function inputcheck(){
+	var s = document.getElementById("username").value;
+	if(!(s.length >= 5 && s.length <= 8)){
+		alert("6문자와 8문자 사이로 입력!");
+		document.getElementById("username").focus();
+		return false;
+	}
+}
+
+//2.아이디 한글 못쓰게
+var exp =
+
+//3.이름 빈문자열/공백(x)
+
+//4.폰번 숫자만 입력 
+
+//1~4번 조건 다허용 시 submit 가능
+</script>
+</head>
+
+<body>
+
+<h3>회원가입</h3>
+<form onsubmit="return inputCheck">
+이름: <input type='text' id='name' /><br />
+주소: <input type='text' id='addr' /><br />
+생일: <input type='date' id='birthday' /><br />
+ID (6~8 문자):
+<input type='text' id='username' /><br />
+이메일: <input type='email' id='email' /><br />
+휴대폰: <input type='tel' id='phone' /><br />
+<input type='submit' id='확인' /><br />
+</form>
+
+</body>
+</html>

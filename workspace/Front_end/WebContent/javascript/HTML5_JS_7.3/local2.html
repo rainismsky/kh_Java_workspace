@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>new document2</title>
+
+<script>
+
+/*var없이 변수 선인시 전역변수가 됨.*/
+var scope = "global";
+function checkscope(){
+	scope="local";
+	document.write(scope);
+	myscope="mylocal";
+	document.write(myscope);
+}
+checkscope();
+document.write(scope);
+document.write(myscope);
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

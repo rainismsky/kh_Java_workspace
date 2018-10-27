@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>form_test</title>
+</head>
+<body>
+
+<form action="input.jsp" method="post">
+이메일 : <input type="email" name="email"/><br/>
+URL : <input type="url" name="url"/><br/>
+전.번 : <input type="tel" name="tel"/><br/>
+색상 : <input type="color" name="color"/><br/>
+월 : <input type="month" name="month"/><br/>
+날짜 : <input type="date" name="date"/><br/>
+주 : <input type="month" name="week"/><br/>
+시간 : <input type="time" name="time"/><br/>
+지역 시간 : <input type="datetime-local" name="localdatetime"/><br/>
+숫자 : <input type="number" name="number" min="1" max="10" step="2" /><br/>
+범위 : <input type="range" name="range" min="1" max="10" step="2" /><br/>
+<input type="submit" value="제출"/>
+</form>
+
+</body>
+</html>
+
+<select>
+<option selected> 가까운 분야 선택 </option>
+<option value="student">학생</option>
+<option value="webdev">웹개발</option>
+<option value="webdes">웹디자인</option>
+<option value="tutor">교육관련</option>
+<option value="etc">기타</option>
+</select>
+
+<textarea>
+<label for="memo">남길 말씀</label>
+<textarea id="memo" cols="60" rows="15">
+</textarea>
+
+<!-- hidden속성 : 클라이언트 안보게할때 씀 -->
+<form></form>
+<input type="submit" />
+<inpout type="hidden" name="hidden" value="숨겨 보내는 값">
+
+
